@@ -1,0 +1,181 @@
+1. What is the value of the result variable in the following code?
+
+var result = mystery("cow");
+function mystery(animal){
+  var callCount = 0;
+  if (animal == "chicken"){
+    return cluck();
+  }
+  else if (animal == "cow"){
+    return moo();
+  }
+  else return callCount;
+
+  function cluck(){
+    callCount++;
+    return "cluck";
+  }
+  function moo(){
+    animal = "chicken";
+    return "moo" + mystery(animal);
+  }
+}
+
+answer: "cluck"
+
+
+2. What is printed as a result of the following code?
+
+var g = f(10);
+console.log( g() );
+console.log( g() );
+console.log( g() );
+
+function f(start){
+  var counter = start;
+  return function(){
+    counter++;
+    return counter;
+  }
+}
+
+answer: the result will be 11,12,13, etc.
+which is the result of counter++ being added to the 10.
+
+3. What is the value of the variable result after the following code block?
+
+var d_Wade = {name: "Dwayne Wade", number: 23, position: "Shooting Guard",
+talents: {scoring: 9.1, blocking: 6, rebounding: 6, steals: 9, clutch: 9}  };
+
+var prop1 = "talents";
+var prop2 = "blocking";
+var result = dWade[prop1][prop2];
+
+answer: the code will come back as "undifined" because dWade is not listed as a variable.
+
+
+
+4. What is the value of the variable result after the following code block?
+
+var f = function(){
+  return 99;
+}
+var g = f;
+var result = g();
+var g = function(){
+  return 60;
+}
+
+answer:
+
+
+ 5. What is the value of the variable result after the following code block?
+
+var result = thisIsWeird();
+function thisIsWeird() {
+  function secret() {
+    return 66;
+  }
+  var result;
+  function secret() {
+    return 1;
+  }
+  // The following line of code assigns a
+  // secret function to the variable result.
+  result = secret();
+  function secret() {
+    return "used sock";
+  }
+  return result;
+}
+
+
+6. Create a new type of Object called Athlete with the following properties:
+name, age, sex, height, weight, and the last five marks reached in competitions
+(as an array named marks). Use pseudoclassical notation.
+
+answer:
+var Athlete = function(name,age,sex,height,weight,marks){
+  this.name= name;
+  this.age= age;
+  this.sex= sex;
+  this.height= height;
+  this.weight= weight;
+  var marks = [a,b,c,d,e]
+  }
+
+7. function getMarksAverage{
+    marks = [a,b,c,d,e];
+    function avgAll(i){
+      var sum = x;
+      for(var i = x, i < marks.length; i++){
+          sum + marks[i];
+      }
+      var avgAll = sum / marks.length;
+    }
+    }
+
+
+
+8. Write a prototypal function which getRoundedMarks which uses the
+Array.map function and Math.round in order to round the marks of the athlete to
+the nearest integer. Your function should return an array with the rounded marks.
+
+function getRoundedMarks{
+    marks = [a,b,c,d,e];
+    fuction rndAll(){
+      return Math.round(Array.map);
+    }
+}
+
+9.Write a class named Point2D which stores x and y coordinates.
+
+    var Point2D function(x,y){
+      this.x = x;
+      this.y = y;
+    }
+
+10. Write a class named Rectangle which stores three variables: a Point2D to
+represent the top left of the Rectangle, a width and a height.
+Use ES6 class syntax.
+
+var Rectangle function(P2D,w,h){
+  this.P2D = Point2D;
+  this.w = width;
+  this.h = height;
+}
+
+11. Write an instance method named getArea which returns the area of the Rectangle.
+
+var Rectangle function(l,w){
+  function getArea{
+    area = l*w;
+  }
+}
+
+12. Write a function named getTotalCoverage which receives an array of Rectangle objects, uses
+map to create an array with their areas, and then uses reduce to return the sum of their areas.
+
+function getTotalCoverage {
+
+}
+
+13. Explain the difference between const, let, and var.
+
+answer: The difference between const, let, and var is that "const" is a variable
+that cannot be changed once it is set, it cannot be given a new value. "Var"
+ can define the variable globally as well as locally to the entire
+ function; it may or may not be reassigned and it can be optionally used for whole
+ function. "let" is used to reassign variables as many times as necessary as in
+ the case of loops and algorithms.
+
+
+ 14. What is horizontal scalability?
+
+ answer: horizontal scalability is connecting multiple hardware or software systems so
+ that they work in as one unit to increase performance.
+
+ 15. what is vertical scalability?
+
+  answer: vertical scalability is when resources are added to increase the ability
+  of existing hardware or software to make it work better.
